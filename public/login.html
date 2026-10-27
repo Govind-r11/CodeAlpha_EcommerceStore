@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login | CodeAlpha Store</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <main class="login-box">
+        <h1>Sign in</h1>
+        <p class="subtitle">Welcome back to CodeAlpha Store!</p>
+
+        <form id="loginForm">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" autocomplete="email" maxlength="254" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" autocomplete="current-password" maxlength="200" required>
+
+            <button type="submit" id="loginButton">Login</button>
+            <p id="message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="links">
+            New customer?
+            <a href="register.html">Create your account</a>
+        </p>
+
+        <p class="links">
+            <a href="index.html">Back to Store</a>
+        </p>
+    </main>
+</body>
+</html>

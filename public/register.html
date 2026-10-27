@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | CodeAlpha Store</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="register.js" defer></script>
+</head>
+<body>
+    <main class="register-box">
+        <h1>Create Account</h1>
+        <p class="subtitle">Join CodeAlpha Store</p>
+
+        <form id="registerForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" maxlength="100" autocomplete="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" maxlength="254" autocomplete="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" minlength="8" maxlength="200" autocomplete="new-password" required>
+
+            <button type="submit" id="registerButton">
+                Create Account
+            </button>
+            <p id="message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="links">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+        <p class="links">
+            <a href="index.html">Back to Store</a>
+        </p>
+    </main>
+</body>
+</html>

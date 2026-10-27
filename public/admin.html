@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <h1>Admin Dashboard</h1>
+    <section class="panel" id="loginPanel">
+        <h2>Admin Login</h2>
+        <form id="loginForm">
+            <input id="username" name="username" placeholder="Admin username" autocomplete="username" required>
+            <input id="password" name="password" type="password" placeholder="Admin password"
+                autocomplete="current-password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section class="panel hidden" id="dashboard">
+        <h2>Customer Orders</h2>
+        <button id="refreshButton" type="button">Refresh Orders</button>
+        <button id="logoutButton" type="button">Logout</button>
+        <div id="orders"></div>
+    </section>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <script src="admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | My Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="my-orders.css">
+</head>
+<body>
+
+    <header class="orders-header">
+        <a href="/" class="store-logo">My Store</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/my-orders.html" class="active">My Orders</a>
+            <a href="/login.html" id="accountLink">Login</a>
+        </nav>
+    </header>
+
+    <main class="orders-container">
+        <div class="orders-heading">
+            <div>
+                <p class="eyebrow">YOUR ACCOUNT</p>
+                <h1>My Orders</h1>
+                <p class="subtitle">
+                    Track your purchases and view your order details.
+                </p>
+            </div>
+
+            <a href="/" class="continue-shopping">
+                Continue Shopping
+            </a>
+        </div>
+
+        <div id="message" class="message" role="status">
+            Loading your orders...
+        </div>
+        <div id="ordersList" class="orders-list"></div>
+    </main>
+
+    <footer class="orders-footer">
+        <p>Thank you for shopping with us!</p>
+    </footer>
+
+    <script src="my-orders.js" defer></script>
+</body>
+</html>
