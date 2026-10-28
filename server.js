@@ -8,6 +8,7 @@ const path = require("node:path");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const session = require("express-session");
+const { MongoStore } = require("connect-mongo");
 
 const Order = require("./models/Order");
 const User = require("./models/User");
@@ -26,15 +27,26 @@ if (
 
 // Middleware
 app.use(express.json({ limit: "10kb" }));
+
+if (process.env.NODE_ENV === "production") {
+    app.set("trust proxy", 1);
+}
 app.use(
     session({
         name: "admin.sid",
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
+
+        store: MongoStore.create({
+            mongoUrl: process.env.MONGODB_URI,
+            collectionName: "sessions",
+            ttl: 30 * 60
+        }),
+
         cookie: {
             httpOnly: true,
-            secure: false,
+            secure: process.env.NODE_ENV === "production",
             sameSite: "strict",
             maxAge: 30 * 60 * 1000
         }
