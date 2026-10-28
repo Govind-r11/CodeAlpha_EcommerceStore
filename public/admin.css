@@ -3,7 +3,11 @@ body {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
-    background: #f4f6f8;
+    background: #1e2a3a;
+}
+
+h1{
+    color: #ff9d0b;
 }
 
 .panel {
